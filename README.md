@@ -15,7 +15,8 @@ We begin with a MySQL database of products for sale.
 2. Using the Node.js module Inquirer, customer is asked for their order.
 ![Screenshot of landing page](images/Screen_Shot2_start.png)
 
-3. If the quantity of the item requested is more than what's in stock, the customer is informed and asked to start over.
+3. If the quantity of the item requested is more than what's in stock, the customer is informed and asked to start 
+over.
 ![Screenshot of insufficient stock message](./images/Screen_Shot3_stock.png)	
 
 4. If sufficient stock is available, the order is filled and customer is given a total amount.
