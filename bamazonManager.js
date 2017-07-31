@@ -75,7 +75,7 @@ function viewProducts() {
 }
 
 function lowInventory() {
-	connection.query("SELECT * FROM products WHERE stock_quantity < 3 ORDER BY stock_quantity", function(err, res) {
+	connection.query("SELECT * FROM products WHERE stock_quantity < 5 ORDER BY stock_quantity", function(err, res) {
 		if (err) throw (err);
     console.log("Item ID | Product | Inventory");
     for (var i = 0; i < res.length; i++) {
