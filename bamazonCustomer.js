@@ -15,7 +15,7 @@ connection.connect(function(err) {
 });
 
 function start() {
-	connection.query("SELECT * FROM products", function(err, res, fields) {
+	connection.query("SELECT * FROM products", function(err, res) {
     if (err) throw (err);
     console.log("Item ID | Product Name | Price");
     for (var i = 0; i < res.length; i++) {
@@ -34,7 +34,7 @@ function placeOrder() {
 			type: "input",
 			message: "To purchase, please enter a product id.",
 			validate: function(value) {
-          		if (isNaN(value) === false) {
+          		if (isNaN(value) === false) || (value <= res.length - 1) {
             		return true;
           		}
           			return false;
@@ -46,7 +46,7 @@ function placeOrder() {
 			type: "input",
 			message: "How many would you like?",
 			validate: function(value) {
-          		if (isNaN(value) === false) {
+          		if (isNaN(value) === false){
             		return true;
           		}
           			return false;
